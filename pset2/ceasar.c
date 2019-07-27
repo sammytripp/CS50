@@ -1,3 +1,9 @@
+// Implements Ceasars cipher, which encrypts messages by
+// shifting each ASCII value of given plaintext by 'key' 
+// number of characters.
+// Samantha Tripp
+// 01/2019
+
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>

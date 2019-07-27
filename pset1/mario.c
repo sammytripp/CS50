@@ -1,3 +1,8 @@
+// Prints out a Super Mario Bros pyramid of hashes of a user-specified 
+// height between 1 and 22 levels.
+// Samantha Tripp
+// 07/2017
+
 #include <stdio.h>
 #include <cs50.h>
 
