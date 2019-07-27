@@ -12,6 +12,7 @@
 int main(int argc, string argv[])
 {
     // Ensure that command line argument './caesar key' was received
+    const int LETTERS_IN_ALPHABET = 26;
     int key;
     if (argc == 2)
     {
@@ -38,12 +39,12 @@ int main(int argc, string argv[])
                 printf("ciphertext: ");
                 for (int j = 0; j < strlen(plaintext); j++)
                 {
-                    // If character is upper case (ASCII 65 to 90)
-                    if (plaintext[j] >= 65 && plaintext[j] <= 90)
+                    // If character is upper case (ASCII 'A'  to 'Z')
+                    if (plaintext[j] >= (int) 'A' && plaintext[j] <= (int) 'Z')
                     {
-                        if (plaintext[j] + key > 90)
+                        if (plaintext[j] + key > (int) 'Z')
                         {
-                            plaintext[j] = 65 + ((key  - 1 - (90 - plaintext[j])) % 26);
+                            plaintext[j] = (int) 'A' + ((key  - 1 - ((int) 'Z' - plaintext[j])) % LETTERS_IN_ALPHABET);
                         } 
                         else 
                         {
@@ -51,12 +52,12 @@ int main(int argc, string argv[])
                         }
                     }
                     
-                    //If character is lower case (ASCII 97 to 122)
-                    if (plaintext[j] >= 97 && plaintext[j] <= 122)
+                    //If character is lower case (ASCII 'a'  to 'z')
+                    if (plaintext[j] >= (int) 'a' && plaintext[j] <= (int) 'z')
                     {
-                        if (plaintext[j] + key > 122)
+                        if (plaintext[j] + key > (int) 'z')
                         {
-                            plaintext[j] = 97 + ((key - 1 - (122 - plaintext[j])) % 26);
+                            plaintext[j] = (int) 'a' + ((key - 1 - ((int) 'z' - plaintext[j])) % LETTERS_IN_ALPHABET);
                         }
                         else 
                         {
