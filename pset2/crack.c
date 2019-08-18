@@ -75,6 +75,12 @@ int main(int argc, string argv[])
                             {
                                 // Success
                                 printf("%s\n", password);
+
+                                //Free memory
+                                free(salt);
+                                free(test_chars);
+                                free(password);
+
                                 return 0;
                             }
 

@@ -72,7 +72,7 @@ int main(int argc, string argv[])
                         }
                     }
 
-                    //If character is lower case (ASCII 97 to 122)
+                    //If character is lower case (ASCII 'a' to 'z')
                     if (plaintext[j] >= (int) 'a' && plaintext[j] <= (int) 'z')
                     {
                         if (plaintext[j] + keyword[count] > (int) 'z')
